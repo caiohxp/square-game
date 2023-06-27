@@ -1,7 +1,7 @@
-$tamanho-padrão: 50px;
+$tamanho-padrão: 45px;
 section{
-    height: 600px;
-    width: 600px;
+    height: 650px;
+    width: 650px;
     background-color: #464946;
     position: absolute;
     display: grid;
@@ -34,7 +34,7 @@ section{
 }
 .edgeH{
     width: $tamanho-padrão;
-    height: 5px;
+    height: $tamanho-padrão/6;
     background-color: #212121;
     opacity: 0.5;
     &:hover{
@@ -43,7 +43,7 @@ section{
     }
 }
 .edgeV{
-    width: 5px;
+    width: $tamanho-padrão/6;
     height: $tamanho-padrão;
     background-color: #212121;
     opacity: 0.5;

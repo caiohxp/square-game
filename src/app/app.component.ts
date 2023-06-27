@@ -16,7 +16,7 @@ export class AppComponent {
     return array
   }
   montarGrafo() {
-    let o = 9;
+    let o = 10;
     let grafo: comp[][] = []
     for (let i = 0; i < o * 2 - 1; i++) {
       grafo[i] = []
@@ -44,8 +44,8 @@ export class AppComponent {
     console.log(this.player);
     this.player == 1 ? this.player = 2 : this.player = 1;
     let idEdge = document.querySelector(`#i${edge.line}-j${edge.collumn}`);
-    idEdge?.setAttribute("style", "background: #fff; opacity: 1; transition: 0.5s")
     if (edge.composition === "edgeH") {
+      idEdge?.setAttribute("style", "background: #fff; opacity: 1; transition: 0.5s")
       if (!edge.check) {
         edge.check = true;
       }
@@ -77,6 +77,7 @@ export class AppComponent {
           sBot.setAttribute("style", "background: orange");
       }
     } else if (edge.composition === "edgeV") {
+      idEdge?.setAttribute("style", "background: #fff; opacity: 1; transition: 0.5s")
       if (!edge.check) {
         edge.check = true;
       }
