@@ -34,7 +34,7 @@ section{
 }
 .edgeH{
     width: $tamanho-padrão;
-    height: $tamanho-padrão/6;
+    height: calc($tamanho-padrão/6);
     background-color: #212121;
     opacity: 0.5;
     &:hover{
@@ -43,7 +43,7 @@ section{
     }
 }
 .edgeV{
-    width: $tamanho-padrão/6;
+    width: calc($tamanho-padrão/6);
     height: $tamanho-padrão;
     background-color: #212121;
     opacity: 0.5;
