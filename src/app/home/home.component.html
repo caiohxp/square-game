@@ -1,0 +1,18 @@
+<section class="home-section rounded">
+    <div>
+        <h1 class="title">Square Game</h1>
+    </div>
+    <div class="w-100 d-flex justify-content-evenly">
+        <button mat-raised-button class="dropdown-button" [matMenuTriggerFor]="menu">Ordem</button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item>5x5</button>
+            <button mat-menu-item>6x6</button>
+        </mat-menu>
+        <button mat-raised-button class="dropdown-button" [matMenuTriggerFor]="menu">Tipo</button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item>Enumerado</button>
+            <button mat-menu-item>Ponto a Ponto</button>
+        </mat-menu>
+    </div>
+    <button class="home-button rounded" routerLink="game">Start</button>
+</section>

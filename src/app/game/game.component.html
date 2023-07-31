@@ -1,0 +1,9 @@
+<section class="game-section rounded">
+    <div>
+      <div class="line" *ngFor="let i of grafo">
+        <div class="collumn" *ngFor="let j of i">
+          <div id="i{{j.line}}-j{{j.collumn}}" class={{j.composition}} (click)="checkEdge(j)"></div>
+        </div>
+      </div>
+    </div>
+  </section>

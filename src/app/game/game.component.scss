@@ -1,0 +1,59 @@
+$tamanho-padrão: 45px;
+
+.game-section{
+    height: 650px;
+    width: 650px;
+  }
+
+.vertex{
+    width: 20px;
+    height: 20px;
+    border: solid 10px;
+    border-radius: 50%;
+}
+.borderLeftActive{
+    border-left-color: green;
+    transition: 0.5s;
+}
+.borderRightActive{
+    border-right-color: green !important;
+    transition: 0.5s;
+}
+.borderTopActive{
+    border-top-color: green !important;
+    transition: 0.5s;
+}
+.borderBotActive{
+    border-bottom-color: green !important;
+    transition: 0.5s;
+}
+.edgeH{
+    width: $tamanho-padrão;
+    height: calc($tamanho-padrão/6);
+    background-color: #212121;
+    opacity: 0.5;
+    &:hover{
+        cursor: pointer;
+        opacity: 1;
+    }
+}
+.edgeV{
+    width: calc($tamanho-padrão/6);
+    height: $tamanho-padrão;
+    background-color: #212121;
+    opacity: 0.5;
+    &:hover{
+        cursor: pointer;
+        opacity: 1;
+    }
+}
+.square{
+    width: $tamanho-padrão;
+    height: $tamanho-padrão;
+    background: #212121;
+}
+.line{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
