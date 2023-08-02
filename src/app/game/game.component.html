@@ -1,4 +1,9 @@
-<section class="game-section rounded">
+<section class="main-section">
+  <div class="player-content">
+    <h1 class="player-content__p1">Player 1</h1>
+    <h1 class="player-content__p1__score">{{players[0].score}}</h1>
+  </div>
+  <section class="game-section mid-section rounded">
     <div>
       <div class="line" *ngFor="let i of grafo">
         <div class="collumn" *ngFor="let j of i">
@@ -7,3 +12,8 @@
       </div>
     </div>
   </section>
+  <div class="player-content">
+    <h1 class="player-content__p2">Player 2</h1>
+    <h1 class="player-content__p2__score">{{players[1].score}}</h1>
+  </div>
+</section>
