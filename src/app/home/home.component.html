@@ -1,18 +1,38 @@
-<section class="home-section mid-section rounded">
-    <div>
-        <h1 class="title">Square Game</h1>
+<section class="home-section rounded">
+    <div class="w-100 d-flex justify-content-evenly content-home">
+        <div class="d-flex flex-column align-items-center">
+            <mat-form-field class="examp" appearance="outline">
+                <mat-label class="colorWhite"  style="color: {{gameService.player1.color}};">Name Player 1</mat-label>
+                <input matInput (keyup)="escolherNomePlayer1($event)">
+                <mat-icon aria-hidden="false" style="color: {{gameService.player1.color}};" fontIcon="format_color_text" matSuffix></mat-icon>
+              </mat-form-field>
+              <h2>Escolha sua cor: <mat-icon aria-hidden="false" style="color: {{gameService.player1.color}}"  fontIcon="palette" matSuffix></mat-icon></h2>
+            <div class="paleta d-flex flex-wrap justify-content-between">
+                <div *ngFor="let cor of cores" class="colors" style="background-color: {{cor}}" (click)="corPlayer1(cor)"></div>
+            </div>
+        </div>
+        <div class="d-flex flex-column align-items-center">
+            <h1>Tamanho</h1>
+            <button mat-raised-button class="dropdown-button" [matMenuTriggerFor]="menu">{{nameOrdem}}</button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)="changeSize(6)">5x5</button>
+                <button mat-menu-item (click)="changeSize(7)">6x6</button>
+                <button mat-menu-item (click)="changeSize(8)">7x7</button>
+                <button mat-menu-item (click)="changeSize(9)">8x8</button>
+                <button mat-menu-item (click)="changeSize(10)">9x9</button>
+            </mat-menu>
+        </div>
+        <div class="d-flex flex-column align-items-center">
+            <mat-form-field appearance="outline">
+                <mat-label class="colorWhite" style="color: {{gameService.player2.color}}">Name Player 2</mat-label>
+                <input matInput class="colorWhite" (keyup)="escolherNomePlayer2($event)">
+                <mat-icon aria-hidden="false" style="color: {{gameService.player2.color}}" fontIcon="format_color_text" matSuffix></mat-icon>
+              </mat-form-field>
+            <h2>Escolha sua cor: <mat-icon aria-hidden="false" style="color: {{gameService.player2.color}}" fontIcon="palette" matSuffix></mat-icon></h2>
+            <div class="paleta d-flex flex-wrap justify-content-between">
+                <div *ngFor="let cor of cores" class="colors" style="background-color: {{cor}}" (click)="corPlayer2(cor)"></div>
+            </div>
+        </div>
     </div>
-    <div class="w-100 d-flex justify-content-evenly">
-        <button mat-raised-button class="dropdown-button" [matMenuTriggerFor]="menu">Ordem</button>
-        <mat-menu #menu="matMenu">
-            <button mat-menu-item>5x5</button>
-            <button mat-menu-item>6x6</button>
-        </mat-menu>
-        <button mat-raised-button class="dropdown-button" [matMenuTriggerFor]="menu">Tipo</button>
-        <mat-menu #menu="matMenu">
-            <button mat-menu-item>Enumerado</button>
-            <button mat-menu-item>Ponto a Ponto</button>
-        </mat-menu>
-    </div>
-    <button class="home-button rounded" routerLink="game">Start</button>
+    <button class="start-button rounded" routerLink="game">Start</button>
 </section>

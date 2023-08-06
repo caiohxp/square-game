@@ -1,0 +1,11 @@
+.title{
+    color: #fff;
+    padding: 10px;
+    font-size:42px;
+    border: solid 3px;
+    border-color: #212121 #212121 #fff #212121;
+    &:hover{
+        cursor: pointer;
+        color: #9da39d;
+    }
+}

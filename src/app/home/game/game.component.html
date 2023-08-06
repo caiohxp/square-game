@@ -1,0 +1,24 @@
+<section class="main-section">
+    <div style="background-color: {{player1.color}}" class="player-content player-content__turn player-content__p1 rounded">
+        <h1 class="player-content__p1__title">{{player1.name}}</h1>
+        <h1 class="player-content__p1__score">{{player1.score}}</h1>
+        <h2 class="player-content__p2__timer">{{player1.time}}</h2>
+    </div>
+    <section class="game-section mid-section rounded">
+        <div class="content-winner" *ngIf="endGame">{{winner}}</div>
+        <div>
+            <div class="line" *ngFor="let i of grafo">
+                <div class="collumn" *ngFor="let j of i">
+                    <div id="i{{j.line}}-j{{j.collumn}}" class={{j.composition}} (click)="checkEdge(j)">
+                        <div *ngIf="j.composition === 'square'">{{j.value}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div style="background-color: {{player2.color}}" class="player-content player-content__p2 rounded">
+        <h1 class="player-content__p2__title">{{player2.name}}</h1>
+        <h1 class="player-content__p2__score d-flex justify-content-center align-items-center">{{player2.score}}</h1>
+        <h2 class="player-content__p2__timer">{{player2.time}}</h2>
+    </div>
+</section>

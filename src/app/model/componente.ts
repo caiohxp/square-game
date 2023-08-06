@@ -5,11 +5,11 @@ export class Component{
     check: boolean;
     value: number;
 
-    constructor(line: number, collumn: number, composition: string, check: boolean){
+    constructor(line: number, collumn: number, composition: string, check: boolean, value?: number){
         this.line = line;
         this.collumn = collumn;
         this.composition = composition;
         this.check = check;
-        this.value = this.composition === "square"? Math.ceil(Math.random() * 3) : 0;
+        this.value = value || 0;
     }
 }
